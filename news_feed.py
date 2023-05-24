@@ -26,10 +26,18 @@ def fetch_news_feed(url, headers):
         print()
 
 # 뉴스 피드 URL
-news_feed_url = "https://www.yonhapnewstv.co.kr/category/news/economy/feed/"
+economy_news_feed_url = "https://www.yonhapnewstv.co.kr/category/news/economy/feed/"
+browse_news_feed_url = "http://www.yonhapnewstv.co.kr/browse/feed/"
+headline_news_feed_url = "http://www.yonhapnewstv.co.kr/category/news/headline/feed/"
+
 
 # User-Agent 헤더 추가
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36'}
 
 # 뉴스 피드 가져오기
-fetch_news_feed(news_feed_url, headers)
+print("경제 뉴스 피드")
+fetch_news_feed(economy_news_feed_url, headers)
+print("최신 뉴스 피드")
+fetch_news_feed(browse_news_feed_url, headers)
+print("헤드라인 뉴스 피드")
+fetch_news_feed(headline_news_feed_url, headers)
